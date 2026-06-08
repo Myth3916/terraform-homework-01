@@ -146,7 +146,53 @@ resource "docker_image" "nginx" {
 
 ## Задание 2* (со звёздочкой)
 
-*Не выполнено*
+### Создание ВМ и развёртывание MySQL
+
+**1. Создание ВМ в Yandex Cloud:**
+- ОС: Ubuntu 22.04
+- Конфигурация: 2 vCPU, 1 GB RAM
+- Публичный IP: 62.84.118.4
+
+**2. Установка Docker на ВМ:**
+```bash
+ssh ubuntu@62.84.118.4
+sudo apt update
+sudo apt install -y docker.io
+sudo usermod -aG docker $USER
+```
+
+**3. Настройка remote Docker context:**
+```bash
+docker -H ssh://ubuntu@62.84.118.4 ps
+```
+
+**4. Terraform конфигурация для MySQL:**
+- Сгенерированы случайные пароли через `random_password`
+- Образ: `mysql:8`
+- Порт: 127.0.0.1:3306
+- ENV-переменные:
+  - MYSQL_ROOT_PASSWORD
+  - MYSQL_DATABASE=wordpress
+  - MYSQL_USER=wordpress
+  - MYSQL_PASSWORD
+  - MYSQL_ROOT_HOST=%
+
+**5. Проверка env-переменных:**
+```bash
+docker exec mysql-db env | grep MYSQL
+```
+
+**Результат:**
+- MYSQL_ROOT_PASSWORD=c3BaUOMqI0zGeF2K
+- MYSQL_PASSWORD=v59RqOySkCyf0WaG
+- MYSQL_DATABASE=wordpress
+- MYSQL_USER=wordpress
+
+**Скриншоты:**
+![Скриншот](screenshots/11-task2-terraform-apply.png)
+![Скриншот](screenshots/12-task2-docker-ps.png)
+![Скриншот](screenshots/13-task2-mysql-env.png)
+```
 
 ---
 
