@@ -72,9 +72,11 @@
    ```
 
 **Скриншоты:**
-![Скриншот](screenshots/05-terraform-validate-errors.png) — ошибки валидации
-![Скриншот](screenshots/05-terraform-validate-success.png) — успешная валидация
+Ошибки валидации
+![Скриншот](screenshots/05-terraform-validate-errors.png) 
 
+Успешная валидация
+![Скриншот](screenshots/05-terraform-validate-success.png) 
 ---
 
 ### 5. Запуск Docker-контейнера
