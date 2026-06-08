@@ -81,7 +81,7 @@
 
 После исправления ошибок контейнер успешно создан.
 
-![Скриншот](screenshots/06-docker-ps-after-fix.png
+![Скриншот](screenshots/06-docker-ps-after-fix.png)
 
 ---
 
