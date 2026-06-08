@@ -192,7 +192,7 @@ docker exec mysql-db env | grep MYSQL
 ![Скриншот](screenshots/11-task2-terraform-apply.png)
 ![Скриншот](screenshots/12-task2-docker-ps.png)
 ![Скриншот](screenshots/13-task2-mysql-env.png)
-```
+
 
 ---
 
