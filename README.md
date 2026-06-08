@@ -35,7 +35,7 @@
 - **Ключ:** `result`
 - **Значение:** `jlRNeLKX128U5ZAn`
 
-**Скриншот:** `screenshots/04-terraform-apply.png`
+![скрин](screenshots/04-terraform-apply.png)
 
 **Важно:** State-файл `terraform.tfstate` хранит секреты в открытом виде, поэтому его нельзя коммитить в Git!
 
@@ -72,8 +72,8 @@
    ```
 
 **Скриншоты:**
-- `screenshots/05-terraform-validate-errors.png` — ошибки валидации
-- `screenshots/05-terraform-validate-success.png` — успешная валидация
+![Скриншот](screenshots/05-terraform-validate-errors.png) — ошибки валидации
+![Скриншот](screenshots/05-terraform-validate-success.png) — успешная валидация
 
 ---
 
@@ -81,7 +81,7 @@
 
 После исправления ошибок контейнер успешно создан.
 
-**Скриншот:** `screenshots/06-docker-ps-after-fix.png`
+![Скриншот](screenshots/06-docker-ps-after-fix.png
 
 ---
 
@@ -92,7 +92,7 @@
 name = "hello_world"  # вместо example_${random_password...}
 ```
 
-**Скриншот:** `screenshots/07-docker-ps-hello-world.png`
+![Скриншот](screenshots/07-docker-ps-hello-world.png)
 
 **Опасность ключа `-auto-approve`:**
 
@@ -114,8 +114,8 @@ name = "hello_world"  # вместо example_${random_password...}
 После выполнения `terraform destroy` все ресурсы удалены.
 
 **Скриншоты:**
-- `screenshots/08-terraform-destroy.png` — вывод команды terraform destroy
-- `screenshots/09-terraform-state-after-destroy.png` — содержимое state-файла (пустой)
+![Скриншот](screenshots/08-terraform-destroy.png) — вывод команды terraform destroy
+![Скриншот](screenshots/09-terraform-state-after-destroy.png) — содержимое state-файла (пустой)
 
 ---
 
@@ -134,7 +134,7 @@ resource "docker_image" "nginx" {
 
 **Ответ из документации:**
 
-**Скриншот:** `screenshots/10-docker-image-keep_locally-docs.png`
+![Скриншот](screenshots/10-docker-image-keep_locally-docs.png)
 
 > **keep_locally** (Boolean) If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from the docker local storage on destroy operation.
 
