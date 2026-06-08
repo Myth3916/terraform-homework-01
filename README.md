@@ -71,7 +71,6 @@
    name = "example_${random_password.random_string.result}"
    ```
 
-**Скриншоты:**
 Ошибки валидации
 ![Скриншот](screenshots/05-terraform-validate-errors.png) 
 
@@ -115,9 +114,11 @@ name = "hello_world"  # вместо example_${random_password...}
 
 После выполнения `terraform destroy` все ресурсы удалены.
 
-**Скриншоты:**
-![Скриншот](screenshots/08-terraform-destroy.png) — вывод команды terraform destroy
-![Скриншот](screenshots/09-terraform-state-after-destroy.png) — содержимое state-файла (пустой)
+Вывод команды terraform destroy
+![Скриншот](screenshots/08-terraform-destroy.png) 
+
+Содержимое state-файла (пустой)
+![Скриншот](screenshots/09-terraform-state-after-destroy.png)
 
 ---
 
