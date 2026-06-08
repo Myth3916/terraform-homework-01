@@ -247,13 +247,40 @@ tofu destroy
 
 ```
 terraform-homework-01/
-├── README.md
-├── .gitignore
-├── screenshots/           # Скриншоты выполнения
-└── src/                   # Исходный код задания
-    ├── main.tf
-    ├── .terraformrc
-    └── .gitignore
+├── README.md                    # Документация выполнения ДЗ
+├── .gitignore                   # Игнорирование tfstate, .terraform и секретов
+├── screenshots/                 # Скриншоты выполнения заданий (17 файлов)
+│   ├── 01-terraform-version.png
+│   ├── 02-docker-ps-empty.png
+│   ├── 03-terraform-init.png
+│   ├── 04-terraform-apply.png
+│   ├── 05-terraform-validate-errors.png
+│   ├── 05-terraform-validate-success.png
+│   ├── 06-docker-ps-after-fix.png
+│   ├── 07-docker-ps-hello-world.png
+│   ├── 08-terraform-destroy.png
+│   ├── 09-terraform-state-after-destroy.png
+│   ├── 10-docker-image-keep_locally-docs.png
+│   ├── 11-task2-terraform-apply.png
+│   ├── 12-task2-docker-ps.png
+│   ├── 13-task2-mysql-env.png
+│   ├── 14-opentofu-version.png
+│   ├── 15-tofu-init.png
+│   ├── 16-tofu-apply.png
+│   └── 17-tofu-docker-ps.png
+├── src/                         # Задание 1: Введение в Terraform
+│   ├── main.tf                  # Основной код задания
+│   ├── .terraformrc             # Конфигурация зеркала провайдеров
+│   ├── .gitignore               # Локальный .gitignore
+│   ├── terraform.tfstate        # State файл (не коммитить!)
+│   └── terraform.tfstate.backup # Бэкап state файла
+├── task2/                       # Задание 2*: MySQL на remote Docker
+│   ├── main.tf                  # Код для MySQL на ВМ Yandex Cloud
+│   └── terraform.tfstate        # State файл (не коммитить!)
+└── task3/                       # Задание 3*: OpenTofu
+    ├── main.tf                  # Код из задания 1, выполненный через OpenTofu
+    └── terraform.tfstate        # State файл (не коммитить!)
+
 ```
 
 ## Полезные команды
