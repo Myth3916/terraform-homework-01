@@ -198,7 +198,48 @@ docker exec mysql-db env | grep MYSQL
 
 ## Задание 3* (со звёздочкой)
 
-*Не выполнено*
+### Установка и использование OpenTofu
+
+**OpenTofu** — это форк Terraform с открытой лицензией Mozilla Public License 2.0, созданный сообществом после изменения лицензии HashiCorp на BSL.
+
+**1. Установка OpenTofu на Arch Linux:**
+```bash
+sudo pacman -S opentofu
+tofu --version
+```
+
+**2. Инициализация проекта:**
+```bash
+tofu init
+```
+
+**3. Применение конфигурации:**
+```bash
+tofu apply
+```
+
+**Результат:** OpenTofu успешно выполнил тот же код, что и Terraform, создав 3 ресурса:
+- `random_password.random_string` — сгенерирован случайный пароль
+- `docker_image.nginx` — скачан образ nginx:latest
+- `docker_container.nginx` — запущен контейнер
+
+**4. Уничтожение ресурсов:**
+```bash
+tofu destroy
+```
+
+**Вывод:** OpenTofu полностью совместим с Terraform и может выполнять тот же код без изменений.
+
+**Скриншоты:**
+
+Версия OpenTofu
+![Скриншот](screenshots/14-opentofu-version.png) 
+
+Успешное выполнение tofu apply
+![Скриншот](screenshots/16-tofu-apply.png)
+
+Контейнер запущен через OpenTofu
+![Скриншот](screenshots/17-tofu-docker-ps.png)
 
 ---
 
