@@ -9,7 +9,8 @@
 
 Установлена версия Terraform v1.15.5
 
-**Скриншот:** `screenshots/01-terraform-version.png`
+**Скриншот:** 
+![версия Terraform](screenshots/01-terraform-version.png)
 
 ---
 
